@@ -1,10 +1,10 @@
 from rest_framework import generics
-from cars.serializers import(
+from .serializers import(
     CarDetailSerializer,
     CarListSerializer,
 )
 
-from cars.models import Car
+from .models import Car
 
 
 # create object

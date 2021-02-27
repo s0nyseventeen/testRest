@@ -1,5 +1,5 @@
 from django.urls import path
-from cars.views import (
+from .views import (
     CarCreateView,
     CarListView,
     CarDetailView,
