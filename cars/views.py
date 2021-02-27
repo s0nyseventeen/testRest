@@ -4,6 +4,8 @@ from .serializers import(
     CarListSerializer,
 )
 
+# check if user is owner of post, we can change data
+from .permissions import IsOwnerOrReadOnly
 from .models import Car
 
 
@@ -22,5 +24,7 @@ class CarListView(generics.ListAPIView):
 class CarDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CarDetailSerializer
     queryset = Car.objects.all()
+    # check if user is owner of post, we can change data
+    permission_classes = (IsOwnerOrReadOnly, )
 
 
