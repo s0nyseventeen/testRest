@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/v1/cars/', include('cars.urls')),
 
-    # non default
+    # non default, base auth
+    path('api/v1/base-auth/', include('rest_framework.urls')),
 ]
